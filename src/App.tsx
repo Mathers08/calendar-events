@@ -1,9 +1,10 @@
 import React from 'react';
+import AppRouter from "./components/AppRouter";
 
 const App = () => {
   return (
     <div>
-      dfretgb
+      <AppRouter/>
     </div>
   );
 }
