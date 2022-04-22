@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, Layout, Row} from "antd";
 import '../index.css';
-import LoginForm from "../components/LoginForm";
+import {LoginForm} from "../components";
 
 const Login = () => {
   return (

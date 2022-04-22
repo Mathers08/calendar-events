@@ -1,4 +1,4 @@
-import {IUser} from "../../../types/user";
+import {IUser} from "../../../types/IUser";
 import {AuthActionEnum, SetErrorAction, SetIsAuthAction, SetIsLoadingAction, SetUserAction} from "./types";
 import {AppDispatch} from "../../index";
 import axios from "axios";

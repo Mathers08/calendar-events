@@ -1,9 +1,19 @@
-import React from 'react';
-import AppRouter from "./components/AppRouter";
-import Navbar from "./components/Navbar";
+import React, {useEffect} from 'react';
 import {Layout} from "antd";
+import {useActions} from "./hooks/useActions";
+import {IUser} from "./types/IUser";
+import {AppRouter, Navbar} from "./components";
 
 const App = () => {
+  const {setUser, setIsAuth} = useActions();
+
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      setUser({username: localStorage.getItem('username' || '')} as IUser);
+      setIsAuth(true);
+    }
+  }, []);
+
   return (
     <Layout>
       <Navbar/>

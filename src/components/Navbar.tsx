@@ -22,9 +22,11 @@ const Navbar = () => {
             </Menu>
           </>
           :
-          <Menu theme='dark' mode='horizontal' selectable={false}>
-            <Menu.Item onClick={() => navigate(RouteNames.LOGIN)} key={1}>Логин</Menu.Item>
-          </Menu>
+          <>
+            <Menu theme='dark' mode='horizontal' selectable={false}>
+              <Menu.Item onClick={() => navigate(RouteNames.LOGIN)} key={1}>Логин</Menu.Item>
+            </Menu>
+          </>
         }
       </Row>
     </Layout.Header>

@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Button, Layout, Modal, Row} from "antd";
+import {EventCalendar, EventForm} from "../components";
 
 const Event = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
-    <div>
-      EVENT PAGEgfhcjvbknl
-    </div>
+    <Layout>
+      <EventCalendar/>
+      <Row justify='center'>
+        <Button onClick={() => setModalVisible(true)}>Добавить событие</Button>
+          <EventForm/>
+      </Row>
+    </Layout>
   );
 };
 
